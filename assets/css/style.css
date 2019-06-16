@@ -31,3 +31,20 @@ body {
     background-color: skyblue;
     padding: 0.5em;
 }
+
+#score-banner{ 
+    background-color: skyblue;
+    padding: 0.7em 0.2em 0em 0.2em;
+    width: fit-content;
+    line-height: 100%;
+}
+
+#user-score{
+    width: 6em;
+    background-color: darkcyan;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    line-height: 4;
+    font-size: xx-large;
+}
