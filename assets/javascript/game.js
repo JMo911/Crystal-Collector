@@ -23,8 +23,19 @@ $( document ).ready(function() {
             $(this).attr('pointValue', gemstoneValues);
         });
     }
-
     init();
+
+    //START THE GAME BY CLICKING ON A GEMSTONE
+    $(".gemstone").click(function game(){
+        userScore = parseInt(userScore);
+        userScore = userScore + parseInt(($(this).attr("pointValue")));
+        $("#user-score").text(userScore);
+        
+
+
+
+    });
+    //END OF GEMSTONE CLICK EVENT
 
 
 
