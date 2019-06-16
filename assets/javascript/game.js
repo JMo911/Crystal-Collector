@@ -1,20 +1,17 @@
 $( document ).ready(function() {
     //set wins, losses, and users total score to 0
-    var wins;
-    var losses;
+    var wins = 0;
+    var losses = 0;
     var userScore;
     var message;
     var winningNumber;
     var gemstoneValues;
     
     function init(){
-        wins = 0;
-        losses = 0;
         userScore = 0;
-        message = "";
         winningNumber = Math.floor( (Math.random()*120) + 1);
-        $("#game-winning-number").append(winningNumber);
-        $("#wins").text(message);
+        $("#game-winning-number").text(winningNumber);
+        $("#game-message").text(message);
         $("#wins").text("Wins: " + wins);
         $("#losses").text("Losses: " + losses);
         $("#user-score").text(userScore);
@@ -23,6 +20,8 @@ $( document ).ready(function() {
             $(this).attr('pointValue', gemstoneValues);
         });
     }
+
+    //INIT ON DOC READY
     init();
 
     //START THE GAME BY CLICKING ON A GEMSTONE
@@ -31,6 +30,22 @@ $( document ).ready(function() {
         userScore = userScore + parseInt(($(this).attr("pointValue")));
         $("#user-score").text(userScore);
         
+        //WIN SCENARIO
+        if (userScore === winningNumber) {
+            message = "You won!";
+            wins = ++wins;
+            console.log(wins);
+            init();
+        }
+        if (userScore > winningNumber) {
+            message = "You lost";
+            losses = ++losses;
+            init();
+        }
+
+
+
+        //LOSS SCENARIO
 
 
 
