@@ -1,3 +1,33 @@
+body {
+    background-image: url("https://ak0.picdn.net/shutterstock/videos/7409470/thumb/1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+   }
+
+
 .gemstone{
-    width: 3em;
+    width: 5em;
+    margin: 0.5em;
+    background-color: beige;
+    border: 1px solid black;
+}
+
+.card-subtitle{
+    color: black;
+}
+
+#game-winning-number{
+    width: 6em;
+    background-color: darkcyan;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    line-height: 4;
+    font-size: xx-large;
+}
+
+#win-loss-counter{ 
+    margin-left: 1em;
+    background-color: skyblue;
+    padding: 0.5em;
 }
